@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>V ID</th>
+            <th>Vehical Name</th>
+            <th>Type</th>
+            <th>Brand</th>
+            <th>Year</th>
+            <th>Price</th>
+        </tr>
+
+       
+            {% for i in data %}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.vname}}</td>
+                <td>{{i.type}}</td>
+                <td>{{i.cname}}</td>
+                <td>{{i.year}}</td>
+                <td>{{i.price}}</td>
+            </tr>
+             {% endfor %}
+    </table>
+</body>
+</html>

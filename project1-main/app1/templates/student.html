@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+            tr{
+                border:solid;
+                box-shadow: 2px 2px 3px grey;
+            }
+        
+    </style>
+</head>
+<body>
+    <table >
+        
+         <tr>
+            <th>Name</th>
+            <th>Kannada</th>
+            <th>English</th>
+            <th>Physics</th>
+            <th>Chemistry</th>
+            <th>Maths</th>
+            <th>Biology</th>
+         </tr>
+         {% for student in data1 %}
+         <tr>
+            <td>{{student.name | upper }}</td>
+            <td>{{student.kan}}</td>
+            <td>{{student.Eng}}</td>
+            <td>{{student.phy}}</td>
+            <td>{{student.che}}</td>
+            <td>{{student.mat}}</td>
+            <td>{{student.bio}}</td>
+         </tr>
+         
+         {% endfor %}
+         
+
+         
+
+    </table>
+     <h1>{{data1.0.name | upper}}</h1>        
+     {% comment %} #data1 is list inside 0th index (dictionery) in that name  {% endcomment %}
+
+    <a href="{% url 'app1:person' %}">person</a>
+    <a href="{% url 'app2:sample1' %}">sample</a>
+</body>
+</html>

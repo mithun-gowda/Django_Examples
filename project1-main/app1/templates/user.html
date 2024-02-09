@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if pk == 'login' %}
+    <form action="">
+        <table>
+            <tr>
+                <td><label for="username">Username</label></td>
+                <td><input type="text" id="username"></td>
+            </tr>
+            <tr>
+                <td><label for="fname">First Name</label></td>
+                <td><input type="text" id="fanme"></td>
+            </tr>
+            <tr>
+                <td><label for="lname">Last Name</label></td>
+                <td><input type="text" id="lanme"></td>
+            </tr>
+            <tr>
+                <td><label for="pwd">Password</label></td>
+                <td><input type="password" id="pwd"></td>
+            </tr>
+            <tr>
+                <td><label for="mail">Email</label></td>
+                <td><input type="email" id="mail"></td>
+            </tr>
+            <tr>
+                <td><label for="gnd" name="gender">Gender</label></td>
+                <td><input type="radio" id="gnd" name="gender" value="Male">Male</td>
+                <td><input type="radio" id="gnd" name="gender" value="FmMale">FeMale</td>
+            </tr>
+            <tr>
+                <td><label for="phone">Phone Number</label></td>
+                <td><input type="tel" id="phone"></td>
+            </tr>  
+        </table>
+    </form>
+    
+
+    {% elif pk == 'logout' %}
+    <input type="submit" value='login'>
+    <input type="submit" value='register'>
+
+    {% else %}
+    <h3>Enter valid input {{pk}} </h3>
+
+    {% endif %}
+
+    <a href="{% url 'app1:person' %}">person</a>
+     {% comment %} <a href="{% url 'person' name=name-> (arg1=val)%}">content</a> {% endcomment %}
+</body>
+</html>

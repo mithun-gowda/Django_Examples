@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 300px ;
+            border:none;
+            box-shadow: 3px 3px 10px grey ;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1>{{s}}</h1>
+    {{a}}
+{% for person in data %}
+    <div>
+        <h1 style=color:red;><em>
+       Name:-{{person.Name}}
+        </em></h1>
+       <h2>
+        Age:-{{person.Age}}
+        </h2>
+        <h3>
+        Phone:-{{person.Phone}}
+        </h3>
+        <h3>
+            Address:-{{person.Address}}
+         </h3>
+    </div>
+{% endfor %}
+<div>
+    <h1>{{s}}</h1>
+{% for i in s %}
+{% if i in 'AEIOUaeiou'%}
+<span style=color:red>{{i}}</span>
+{% else %}
+<span style=color:green>{{i}}</span>
+{% endif %}   
+{% endfor %}
+</div>
+
+<a href="{% url 'student' pk='login' %}">student</a>
+
+</body>
+</html>
